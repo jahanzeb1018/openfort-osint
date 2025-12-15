@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composite Intel Extension</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">CI</div>
+          <div class="brandText">
+            <div class="title">Composite Intel</div>
+            <div class="subtitle">OSINT snapshot</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="inputCard">
+        <label class="label" for="ipAddress">IP Address</label>
+        <div class="inputRow">
+          <input id="ipAddress" type="text" placeholder="e.g. 1.1.1.1" spellcheck="false" />
+          <button id="fetchButton" class="btn primary">Get Intel</button>
+        </div>
+
+        <div id="status" class="status"></div>
+      </section>
+
+      <section id="summary" class="summary hidden"></section>
+
+      <main id="cards" class="cards"></main>
+
+      <footer class="footer">
+        <span class="muted">Background tabs only · Popup stays open</span>
+      </footer>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
